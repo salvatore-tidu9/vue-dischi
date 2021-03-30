@@ -21,13 +21,29 @@
 
             <img src="img/spotify_logo.png" alt=""/>
 
+            <div class="genre_filter">
+
+                <select v-model="selectedGenre">
+
+                    <option value="">All genres</option>
+
+                    <option v-for="genre in genres">
+
+                        {{genre}}
+
+                    </option>
+
+                </select>
+
+            </div>
+
         </header>
 
         <main>
 
             <div class="main_container">
 
-                <div class="disc_item" v-for="disc in discsList">
+                <div class="disc_item" v-for="disc in discsList" v-if="selectedGenre == disc.genre || selectedGenre == ''">
 
                     <img class="cover" :src="disc.poster" alt="">
 
@@ -36,6 +52,8 @@
                     <span class="author">{{disc.author}}</span>
                     
                     <span class="year">{{disc.year}}</span>
+
+                    <span class="genre">{{disc.genre}}</span>
 
                 </div>
 

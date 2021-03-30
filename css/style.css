@@ -23,6 +23,19 @@ header img {
     margin-top: 10px;
 }
 
+header .genre_filter {
+    float: right;
+    margin-top: 15px;
+}
+
+.genre_filter select {
+    padding: 10px 0;
+    padding-right: 5px;
+    color: lightgrey;
+    border-radius: 3px;
+    background-color: rgba(30,45,59,255)
+}
+
 .main_container {
     display: flex;
     justify-content: center;
@@ -30,17 +43,17 @@ header img {
     flex-wrap: wrap;
     width: 80%;
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 80px 0;
 }
 
 .disc_item {
     display: flex;
     align-items: center;
     flex-direction: column;
-    flex-basis: 230px;
+    flex-basis: 250px;
     padding: 20px;
     margin: 10px 20px;
-    height: 380px;
+    height: 420px;
     text-align: center;
     border-radius: 3px;
     background: rgba(46,58,70,255);
@@ -58,7 +71,7 @@ header img {
     color: white;
 }
 
-.disc_item .author, .disc_item .year {
+.disc_item .author, .disc_item .year, .disc_item .genre {
     margin-bottom: 5px;
     font-weight: bold;
     color: grey;
@@ -70,5 +83,9 @@ header img {
 
 .disc_item .year {
     font-size: 12px;
+}
+
+.disc_item .genre {
+    margin-top: 10px;
 }
 
