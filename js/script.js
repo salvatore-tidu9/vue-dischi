@@ -26,10 +26,17 @@ var app = new Vue({
 
             this.discsList.forEach(disc => {
 
-                if (!this.genres.includes(disc.genre)) {
+                // if (!this.genres.includes(disc.genre)) {
+
+                //     this.genres.push(disc.genre);
+
+                // }
+
+                //-----Metodo indexOf-----
+
+                if (this.genres.indexOf(disc.genre) == -1) {
 
                     this.genres.push(disc.genre);
-
                 }
 
             });
